@@ -1,0 +1,2 @@
+# ignore vims .netrwhist file
+.vim/.netrwhist
