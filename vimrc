@@ -2,6 +2,12 @@
 "
 " Based on vimrc_example.vim
 "
+"
+" pathogen
+" To disable a plugin, add it's bundle name to the following list
+"let g:pathogen_blacklist = ['vim-airline']
+let g:pathogen_blacklist = ['lightline.vim']
+
 
 " enable pathogen, load private vim packages
 execute pathogen#infect()
@@ -40,7 +46,7 @@ endif
 " enable modeline parsing
 set modeline
 
-" searching 
+" searching
 set incsearch
 set ignorecase
 set smartcase
@@ -91,13 +97,21 @@ color bdenner
 set listchars=eol:¬,tab:→\ ,trail:․,extends:>,precedes:<
 set list
 
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+set laststatus=2
+
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 
