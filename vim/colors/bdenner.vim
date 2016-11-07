@@ -18,7 +18,7 @@ if exists("syntax_on")
 endif
 
 
-hi Visual ctermbg=235 cterm=NONE
+hi Visual term=reverse cterm=None ctermbg=235
 hi SpellBad ctermbg=black cterm=underline
 hi SpellCap ctermbg=black cterm=underline
 
