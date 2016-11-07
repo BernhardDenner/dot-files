@@ -1,2 +1,3 @@
 # ignore vims .netrwhist file
-.vim/.netrwhist
+vim/.netrwhist
+**/*.swp
