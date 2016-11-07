@@ -18,4 +18,7 @@ cd $ENV_DIR
 install_env_link vimrc .vimrc
 install_env_link vim .vim
 
+# install tmux config
+install_env_link tmux.conf .tmux.conf
+
 
