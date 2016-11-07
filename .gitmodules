@@ -41,3 +41,8 @@
 [submodule "vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+
+[submodule "fonts-awesome-terminal-fonts"]
+	path = font/awesome-terminal-fonts
+	url = https://github.com/gabrielelana/awesome-terminal-fonts.git
+

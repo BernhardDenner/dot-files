@@ -1,3 +1,4 @@
 # ignore vims .netrwhist file
 vim/.netrwhist
 **/*.swp
+font/fonts
