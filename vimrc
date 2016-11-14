@@ -71,6 +71,7 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 80 characters.
   autocmd FileType text setlocal textwidth=80
+  autocmd FileType tex setlocal textwidth=80
 
   " always show line on column 80
   set colorcolumn=+1
