@@ -25,6 +25,9 @@ hi SpellCap ctermbg=black cterm=underline
 hi SpecialKey ctermfg=237
 hi NonText ctermfg=236
 
+" color of the textwidh limiting line (colorcolumn)
+hi ColorColumn term=reverse ctermbg=234
+
 let colors_name = "bdenner"
 
 " vim: sw=2

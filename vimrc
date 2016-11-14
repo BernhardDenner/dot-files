@@ -69,8 +69,11 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " For all text files set 'textwidth' to 80 characters.
+  autocmd FileType text setlocal textwidth=80
+
+  " always show line on column 80
+  set colorcolumn=+1
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -97,12 +100,15 @@ color bdenner
 set listchars=eol:¬,tab:→\ ,trail:․,extends:>,precedes:<
 set list
 
+" enable powerline fonts
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+" space as space symbol
 let g:airline_symbols.space = "\ua0"
 
+" always show file status line
 set laststatus=2
 
 
