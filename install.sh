@@ -21,4 +21,5 @@ install_env_link vim .vim
 # install tmux config
 install_env_link tmux.conf .tmux.conf
 
-
+# xmodmap, for german umlauts
+install_env_link Xmodmap .Xmodmap
