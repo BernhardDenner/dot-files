@@ -46,3 +46,6 @@
 	path = font/awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts.git
 
+[submodule "vim-latex"]
+	path = vim/bundle/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git
