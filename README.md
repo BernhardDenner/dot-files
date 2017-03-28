@@ -13,4 +13,4 @@ If you like it, let me know; suggestions always welcome ;)
 	./install-fonts.sh
 	./install.sh
 
-
+	.zshrc: ZSH_CUSTOM=~/.environment/zsh_custom
