@@ -72,6 +72,11 @@ if has("autocmd")
   " For all text files set 'textwidth' to 80 characters.
   autocmd FileType text setlocal textwidth=80
   autocmd FileType tex setlocal textwidth=80
+  autocmd FileType md setlocal textwidth=80
+
+  " disable vim-airline whitspace checks for LaTeX file, otherwise I will
+  " check all tex file all the time for bad whitespaces ;)
+  autocmd FileType tex let b:airline_whitespace_disabled = 1
 
   " always show line on column 80
   set colorcolumn=+1
@@ -111,6 +116,17 @@ let g:airline_symbols.space = "\ua0"
 
 " always show file status line
 set laststatus=2
+
+
+" LanguageTool Grammar checker
+"
+" install LanguageTool (https://www.languagetool.org/) on /opt/LanguageTool
+" and use it with
+" :LanguageToolCheck
+" :LanguageToolClear
+"
+" install helptags: vim -c 'helptags ~/.vim/bundles/vim-LanugageTool/doc'
+let g:languagetool_jar='/opt/LanguageTool/languagetool-commandline.jar'
 
 
 " Convenient command to see the difference between the current buffer and the
