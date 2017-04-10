@@ -6,7 +6,7 @@
 " pathogen
 " To disable a plugin, add it's bundle name to the following list
 "let g:pathogen_blacklist = ['vim-airline']
-let g:pathogen_blacklist = ['lightline.vim']
+let g:pathogen_blacklist = ['lightline.vim', 'vim-latex']
 
 
 " enable pathogen, load private vim packages
@@ -77,6 +77,9 @@ if has("autocmd")
   " disable vim-airline whitspace checks for LaTeX file, otherwise I will
   " check all tex file all the time for bad whitespaces ;)
   autocmd FileType tex let b:airline_whitespace_disabled = 1
+
+  " ignore certain lacheck messages
+  let g:syntastic_tex_lacheck_quiet_messages={ 'regex': '\Vpossible unwanted space at "{"' }
 
   " always show line on column 80
   set colorcolumn=+1

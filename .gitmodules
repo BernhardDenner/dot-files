@@ -53,4 +53,6 @@
 [submodule "vim-LanguageTool"]
 	path = vim/bundle/vim-LanguageTool
 	url = https://github.com/dpelle/vim-LanguageTool.git
-
+[submodule "vimtex"]
+	path = vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex.git
