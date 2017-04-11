@@ -56,3 +56,9 @@
 [submodule "vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "vim-SyntaxAttr"]
+	path = vim/bundle/SyntaxAttr.vim
+	url = https://github.com/vim-scripts/SyntaxAttr.vim.git
+[submodule "vim-xterm-color-table"]
+	path = vim/bundle/xterm-color-table.vim
+	url = https://github.com/guns/xterm-color-table.vim.git

@@ -28,6 +28,8 @@ hi NonText ctermfg=236
 " color of the textwidh limiting line (colorcolumn)
 hi ColorColumn term=reverse ctermbg=234
 
+hi Search ctermfg=black ctermbg=11
+
 let colors_name = "bdenner"
 
 " vim: sw=2
