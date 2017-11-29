@@ -1,0 +1,56 @@
+/* xul is default namespace */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/**
+ * Firefox UI customizations HowTo
+ *
+ * https://github.com/Aris-t2/CustomCSSforFx
+ *
+ * Enable once:
+ * 1. Tools > WebDeveloper > Toggle Tools > Toolbox Options > Enable browser chrome and add-on debugging toolboxes
+ * 2. Tools > WebDeveloper > Toggle Tools > Toolbox Options > Enable remote debugging
+ *
+ * Hit Ctrl+Alt+Shift+I or open 'Tools > WebDeveloper > Browser Toolbox'.
+ *
+ * Inspect ui or web content.
+ *
+ */
+
+
+/**
+ * disable display of text for bookmarks in bookmark toolbar (but not for folders)
+ */
+#personal-bookmarks toolbarbutton.bookmark-item[image]:not([image=""]):not([container="true"]) label {
+    display: none !important;
+}
+
+/* remove space between icons */
+#personal-bookmarks toolbarbutton.bookmark-item {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* show the dropmarker (small arrow) for folders */
+#personal-bookmarks .tollbarbutton-menu-dropmarker {
+    display: block !important;
+    margin-left: 0.5em !important;
+}
+
+/* this is for showing the bookmark labels on hover
+#personal-bookmarks toolbarbutton.bookmark-item:hover .toolbarbutton-text {
+    display: block !important;
+}
+*/
+
+
+/**
+ * Multi row tabs
+ *
+ * see https://github.com/andreicristianpetcu/UserChrome-Tweaks/blob/09fa38a304af88b685f4086bc8ea9997dd7db0fd/tabs/multi_row_tabs_firefox_v57.css
+ *
+ * but for new I do not want to enable this (if I need more rows I probably should close some tabs)
+ */
+
+
+/* vim: et ai ts=4 sts=4 sw=4
+ */
