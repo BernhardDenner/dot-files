@@ -165,3 +165,9 @@ nnoremap <C-M-Left> <C-W>V
 nnoremap <C-M-Up> <C-W>n
 nnoremap <C-M-Down> <C-W>N
 
+
+" Ruby specifics
+" Omni complete features of vim-ruby -> see :help ft-ruby-omni
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_load_gemfile = 1
