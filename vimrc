@@ -171,3 +171,9 @@ nnoremap <C-M-Down> <C-W>N
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_load_gemfile = 1
+
+
+" vim-gnupg
+" use gpg2 only
+let g:GPGExecutable = "gpg2"
+let g:GPGDefaultRecipients = "Bernhard Denner"
