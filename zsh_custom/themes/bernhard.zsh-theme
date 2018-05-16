@@ -1,7 +1,7 @@
 # AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info) $(_ruby_version)
+$(_user_host)${_current_dir} $(git_prompt_info) $(_gerrit_prompt) $(_ruby_version)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
@@ -84,6 +84,49 @@ function _git_time_since_commit() {
     echo "$color$commit_age%{$reset_color%}"
   fi
 }
+
+# check if the remote 'origin' is pointing to a Gerrit repo
+# this is true if we use SSH port 29418
+function _origin_is_gerrit() {
+  git remote -v 2>/dev/null | grep -q "origin.*29418" 2>/dev/null
+}
+
+# check if the Gerrit Change-Id commit hook is installed
+function _gerrit_commit_hook_installed() {
+  local h=`git rev-parse --git-dir 2>/dev/null`/hooks/commit-msg
+  if [ $? -eq 0 ] ; then
+    grep -q "Change-Id" $h 2>/dev/null
+  else
+    return 1
+  fi
+}
+
+# check if the remote origin push is configured to push to refs/for/*
+function _gerrit_push_to_review() {
+  git config --get remote.origin.push 2>/dev/null | grep -q ":refs/for/"
+}
+
+function _gerrit_prompt() {
+  if _origin_is_gerrit ; then
+    msg="Gerrit:"
+    ok=true
+    if ! _gerrit_commit_hook_installed ; then
+      msg="$msg hook: %{$fg[red]%}✗%{$reset_color%}"
+      ok=false
+    fi
+
+    if ! _gerrit_push_to_review ; then
+      msg="$msg push: %{$fg[red]%}✗%{$reset_color%}"
+      ok=false
+    fi
+
+    if $ok ; then
+      msg="$msg %{$fg[green]%}✔%{$reset_color%}"
+    fi
+    echo $msg
+  fi
+}
+
 
 if [[ $USER == "root" ]]; then
   CARETCOLOR="red"
