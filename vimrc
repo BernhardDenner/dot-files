@@ -6,11 +6,10 @@
 " pathogen
 " To disable a plugin, add it's bundle name to the following list
 "let g:pathogen_blacklist = ['vim-airline']
-let g:pathogen_blacklist = ['lightline.vim', 'vim-latex']
-
+"let g:pathogen_blacklist = ['lightline.vim', 'vim-latex']
 
 " enable pathogen, load private vim packages
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -21,7 +20,89 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+
+" vundle stuff
+filetype off		" required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" Language support:
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'lervag/vimtex'
+Plugin 'robbles/logstash.vim'
+Plugin 'puppetlabs/puppet-syntax-vim'
+"
+" Checking:
+Plugin 'vim-syntastic/syntastic'     " syntax checking for many languages
+Plugin 'vim-scripts/SyntaxAttr.vim'  " show syntax error for current position
+Plugin 'dpelle/vim-LanguageTool'     " LanguageTool grammar checker
+"
+" Productivity:
+Plugin 'tpope/vim-endwise'    " add closing tags (e.g. Ruby 'end')
+Plugin 'tpope/vim-fugitive'   " Git wrapper for vim
+Plugin 'tpope/vim-surround'   " add/manipulate surroundings (add ...)
+
+Plugin 'scrooloose/nerdtree'  " file browser
+Plugin 'Xuyuanp/nerdtree-git-plugin'  " show Git status of files in NERDTree
+
+" Visual stuff:
+Plugin 'vim-airline/vim-airline'        " status line
+Plugin 'vim-airline/vim-airline-themes' " themes for airline
+Plugin 'airblade/vim-gitgutter'         " show changes for file in Git
+
+
+" Misc:
+Plugin 'guns/xterm-color-table.vim'  " test Truecolor possibility of terminal
+Plugin 'tpope/vim-repeat'            " add repeat functionality for plugins
+
+Plugin 'jamessan/vim-gnupg'          " natively read/write encrypted files
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+
 " allow backspacing over everything in insert mode
+
+
+
+
+
 set backspace=indent,eol,start
 
 set ruler		" show the cursor position all the time
@@ -126,6 +207,8 @@ let g:airline_symbols.space = "\ua0"
 " always show file status line
 set laststatus=2
 
+" map <CTRL>-n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " LanguageTool Grammar checker
 "

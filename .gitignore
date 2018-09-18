@@ -3,3 +3,8 @@ vim/.netrwhist
 **/*.swp
 font/fonts
 vim/spell
+
+# we now use vundle, which adds the plugins to the bundle dir
+vim/bundle/**
+# but vundle itself is a submodule
+!vim/bundle/Vundle.vim
