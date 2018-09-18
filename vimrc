@@ -61,11 +61,15 @@ Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'vim-syntastic/syntastic'     " syntax checking for many languages
 Plugin 'vim-scripts/SyntaxAttr.vim'  " show syntax error for current position
 Plugin 'dpelle/vim-LanguageTool'     " LanguageTool grammar checker
+Plugin 'bronson/vim-trailing-whitespace'  " show exactly that
 "
 " Productivity:
 Plugin 'tpope/vim-endwise'    " add closing tags (e.g. Ruby 'end')
 Plugin 'tpope/vim-fugitive'   " Git wrapper for vim
 Plugin 'tpope/vim-surround'   " add/manipulate surroundings (add ...)
+Plugin 'tmhedberg/matchit'    " extend the power of the '%' command
+Plugin 'ervandew/supertab'    " completion with <Tab> only
+Plugin 'tComment'             " comment/uncomment lang aware
 
 Plugin 'scrooloose/nerdtree'  " file browser
 Plugin 'Xuyuanp/nerdtree-git-plugin'  " show Git status of files in NERDTree
