@@ -74,6 +74,12 @@ if has("autocmd")
   autocmd FileType tex setlocal textwidth=80
   autocmd FileType md setlocal textwidth=80
 
+  " format options, for details see :help fo-table
+  " automatic paragaph formating (hard wrapping) and handle lists
+  autocmd FileType text setlocal fo+=anw
+  autocmd FileType tex setlocal fo+=anw
+  autocmd FileType md setlocal fo+=anw
+
   " disable vim-airline whitspace checks for LaTeX file, otherwise I will
   " check all tex file all the time for bad whitespaces ;)
   autocmd FileType tex let b:airline_whitespace_disabled = 1
