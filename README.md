@@ -4,10 +4,10 @@ Exists mainly for sharing between several workstations
 
 If you like it, let me know; suggestions always welcome ;)
 
-### installation ###
+### Installation ###
 
 ```bash
-git clone https://github.com/... .environment
+git clone https://github.com/BernhardDenner/dot-files.git .environment
 cd .environment
 git submodule init
 git submodule update
@@ -21,4 +21,4 @@ plugins=(zsh-256color zsh-autosuggests)
 
 # must be source last
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+```
