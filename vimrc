@@ -50,12 +50,13 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" Language support:
+" Language and file type support:
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'lervag/vimtex'
 Plugin 'robbles/logstash.vim'
 Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'stephpy/vim-yaml'
 "
 " Checking:
 Plugin 'vim-syntastic/syntastic'     " syntax checking for many languages
