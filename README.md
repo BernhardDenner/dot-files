@@ -6,11 +6,19 @@ If you like it, let me know; suggestions always welcome ;)
 
 ### installation ###
 
-	git clone https://github.com/... .environment
-	cd .environment
-	git submodule init
-	git submodule update
-	./install-fonts.sh
-	./install.sh
+```bash
+git clone https://github.com/... .environment
+cd .environment
+git submodule init
+git submodule update
+./install-fonts.sh
+./install.sh
 
-	.zshrc: ZSH_CUSTOM=~/.environment/zsh_custom
+# .zshrc additions
+ZSH_CUSTOM=~/.environment/zsh_custom
+
+plugins=(zsh-256color zsh-autosuggests)
+
+# must be source last
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
