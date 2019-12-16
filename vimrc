@@ -270,4 +270,4 @@ let g:rubycomplete_load_gemfile = 1
 " vim-gnupg
 " use gpg2 only
 let g:GPGExecutable = "gpg2"
-let g:GPGDefaultRecipients = "Bernhard Denner"
+let g:GPGDefaultRecipients = ["Bernhard Denner <bernhard.denner@gmail.com"]
