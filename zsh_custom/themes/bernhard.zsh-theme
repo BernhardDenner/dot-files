@@ -1,7 +1,7 @@
 # AVIT ZSH Theme
 
 PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info) $(_gerrit_prompt) $(_ruby_version)
+$(_user_host)${_current_dir} $(git_prompt_info) $(_gerrit_prompt) $(_ruby_version) $(kube_ps1)
 %{$fg[$CARETCOLOR]%}▶%{$resetcolor%} '
 
 PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
